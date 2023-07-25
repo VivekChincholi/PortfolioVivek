@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personnel Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ff21447fb6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,28 +34,96 @@
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
+                        <br>
                         <p class="para">
                             A Tenacious Developer Building the reliable and scalable
                             services in active production environment and having good
                             exposure to different tech stacks and frameworks
                         </p>
                         <div class="tab-titles">
-                            <div class="tab-links active-link">Skills</div>
-                            <div class="tab-links">Experience</div>
-                            <div class="tab-links">Education</div>
+                            <div class="tab-links active-link" onclick="openTab('skills')">Skills</div>
+                            <div class="tab-links active-link" onclick="openTab('exp')">Experience</div>
+                            <div class="tab-links active-link" onclick="openTab('edu')">Education</div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content active-tab" id="skills">
                             <ul>
                                 <li> <span>Spring Boot</span><br>Java FrameWork for robust backenf Developent</li>
                                 <li> <span>React JS</span><br>JacaScript Framework for FrontEnd Developement</li>
                                 <li> <span>Mongo DB</span><br>NoSql DataBase Management System</li>
                             </ul>
                         </div>
+                        <div class="tab-content" id="exp">
+                            <ul>
+                                <li> <span>Infosys India</span><br>Full Stack Web Developer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="edu">
+                            <ul>
+                                <li> <span>Infosys Certified Sprinboot Professional</span><br>An Internal Infosys
+                                    Certification For Spring Boot</li>
+                                <li> <span>Bachelor of Engineering</span><br>Bachelors Degree from Pune University</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------Service------------->
+        <div id="service">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>
+                            vjksbdkvjbsjkbvjksbjbcjk sbfhdacjvhusdfacjjvs bvjdshbvkshbvkjbS jadbvjkbsjkvb kjdbv
+                        </p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-file-pen"></i>
+                        <h2>Copy Writing</h2>
+                        <p>
+                            vjksbdkvjbsjkbvjksbjbcjk sbfhdacjvhusdfacjjvs bvjdshbvkshbvkjbS jadbvjkbsjkvb kjdbv
+                        </p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---------porfolio---------- -->
+        <div id="Porfolio">
+            <div class="container">
+                <h1 class="sub-titles">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function openTab(tabName) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabName).classList.add("active-tab")
+        }
+    </script>
 </body>
 
 </html>
